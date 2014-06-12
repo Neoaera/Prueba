@@ -17,15 +17,16 @@ public class Matrusca {
 			tamdemun[i]=Integer.parseInt(JOptionPane.showInputDialog("Ingrese tamaño de la Matryoshka numero "+j));
 			if(i!=0){
 				int k = i-1;
-				if(i==k){
-					System.out.println("IMPOSIBURUUUU!!");
+				if(tamdemun[i]==tamdemun[k]){
+					JOptionPane.showMessageDialog(null, "LA ACCION NO SE PUEDE REALIZAR\nEL PROGRAMA SE CERRARÁ");;
+					break;
 				}else{
 					System.out.println("Pato");
 				}
 			}
 		}
 		}catch(Exception e){
-			System.out.println("solamente tiene que ingresar numeros enteros");
+			JOptionPane.showMessageDialog(null,"SOLAMENTE INGRESE NUMEROS ENTEROS");
 		}
 	}
 
